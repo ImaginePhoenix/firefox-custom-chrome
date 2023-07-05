@@ -2,7 +2,6 @@
 @import "theme/colors/dark.css";
 
 @import "theme/pages/newtab.css";
-@import "theme/pages/privatebrowsing.css";
 
 @import "theme/parts/video-player.css";
 
@@ -11,3 +10,54 @@
  * default) will be included here and preserved between updates. 
  * You can apply your own custom styles in that file. */
 @import "customContent.css"; /**/
+@-moz-document url-prefix(about:home), url-prefix(about:newtab){
+    body {
+	background-image: url("background.jpg") !important;
+	background-size: cover !important;
+	backdrop-filter: blur(2px) !important;
+	overflow-x: hidden;
+	max-width: 100%;
+    }
+
+    .top-site-button > .tile {
+	border-radius: 40px !important;
+	height: 70px !important;
+	width: 70px !important;
+	background-color: rgba(234,234,212,0) !important;
+    }
+
+    .top-site-outer >.top-site-inner>.top-site-button>.tile>.icon-wrapper{
+	height: 75% !important;
+	width: 75% !important;
+	border-radius: 40px !important;
+    }
+
+    .top-site-outer > .top-site-inner > .top-site-button .default-icon,
+    .top-site-outer > .top-site-inner > .top-site-button .top-site-icon{
+
+	background-size: 100% !important;
+	background-color: rgba(234,234,212,0) !important;
+	border-radius: 40px !important;
+	height: 100% !important;
+	width: 100% !important;
+    }
+
+    .top-site-outer .top-site-icon{
+	border-radius: 40px !important;
+    }
+
+    .search-wrapper .search-inner-wrapper{
+	display: none !important;
+    }
+
+    .title span{
+	text-shadow: -1px -1px rgba(42, 33, 31, 0.65);
+    }
+
+    .top-site-outer:is(.active, :focus, :hover) {
+	background-color: rgba(57,126,158,0.15) !important;
+	width: 120px !important;
+	height: 120px !important;
+	border-radius: 20px !important;
+    }
+}
