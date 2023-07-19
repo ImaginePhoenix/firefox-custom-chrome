@@ -1,4 +1,3 @@
-
 /* Import theme */
 @import "theme/gnome-theme.css";
 
@@ -7,44 +6,3 @@
  * default) will be included here and preserved between updates. 
  * You can apply your own custom styles in that file. */
 @import "customChrome.css"; /**/
-
-#sidebar-box[sidebarcommand=_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action] >#sidebar-header{
-  display: none !important;;
-}
-#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover{
-  max-width: 235px;
-}
-#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]{
-  max-width: 40px;
-  min-width: 40px;
-}
-
-#TabsToolbar{
-  display: none !important;
-}
-
-#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
-  --uc-sidebar-width: 48px !important;
-  --uc-sidebar-hover-width: 250px;
-  --uc-autohide-sidebar-delay: 300ms; /* Wait 0.3s before hiding sidebar */
-  position: relative;
-  min-width: var(--uc-sidebar-width) !important;
-  width: var(--uc-sidebar-width) !important;
-  max-width: var(--uc-sidebar-width) !important;
-  z-index:1;
-}
- 
-#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] > #sidebar-splitter {
-  display: none
-}
- 
-#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] > #sidebar {
-  transition: min-width 115ms linear var(--uc-autohide-sidebar-delay) !important;
-  min-width: var(--uc-sidebar-width) !important;
-  will-change: min-width;
-}
- 
-#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover > #sidebar{
-  min-width: var(--uc-sidebar-hover-width) !important;
-  transition-delay: 0ms !important
-}

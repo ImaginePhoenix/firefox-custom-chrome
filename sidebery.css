@@ -1,0 +1,156 @@
+#root,
+.scrollable {
+	background-image: none !important;
+	background-color: #323232 !important;
+}
+
+.NavigationBar {
+	box-shadow: unset;
+	margin-top: 5px;
+}
+
+Sidebar .panel-btn>svg,
+.Sidebar .panel-btn>img {
+	height: 24px;
+	width: 24px;
+}
+
+.NavigationBar .panel-btn[data-active="true"] {
+	border-radius: 10px;
+}
+
+.Tab[data-lvl="0"] {
+	margin-top: 5px;
+}
+
+.Tab .placeholder>svg {
+	width: 18px;
+	height: 18px;
+}
+
+.Tab {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin: auto;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	width: 95%;
+	border-radius: 10px;
+}
+
+.TabsPanel .container {
+	box-shadow: unset;
+}
+
+.Tab .fav {
+	width: 20px;
+	height: 20px;
+}
+
+.PinnedTab {
+	box-shadow: 0 0 5px #ccc;
+	border-radius: 50px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.PinnedTab[data-active="true"] {
+	box-shadow: 0 0 8px #347354;
+}
+
+.Tab[data-active="true"] {
+	background-color: #347354A6;
+}
+
+@media (min-width: 230px) {
+	.Tab .title {
+		font-size: 15px;
+		width: 90%;
+	}
+
+	.PinnedTab {
+		margin-left: 0.5em;
+		margin-right: 0.2em;
+	}
+
+	.PinnedTab .fav {
+		width: 20px;
+		height: 20px;
+	}
+
+	#root[data-pinned-tabs-position="panel"] .PinnedDock {
+		justify-content: flex-start;
+		width: 100%
+	}
+}
+
+@media (max-width: 48px) {
+	#root {
+		--tabs-indent: unset;
+	}
+
+	#root[data-pinned-tabs-position="panel"] .PinnedDock, #root[data-pinned-tabs-position="top"] .PinnedDock {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.NavigationBar {
+		margin-top: unset;
+		height: 40px;
+	}
+
+	.NavigationBar .panels-box {
+		background-color: #242424 !important;
+	}
+
+	.ScrollBox>.scroll-container {
+		overflow: hidden;
+	}
+
+	.Tab .audio {
+		left: 10px;
+		transform: scale(.80);
+		transform: translateY(4px);
+		z-index: 99 !important;
+	}
+
+	.Sidebar .settings-btn {
+		display: none;
+	}
+
+	.NavigationBar .panels-box {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.NavigationBar .panel-btn:not([data-active]),
+	.Tab .title {
+		display: none;
+	}
+
+	.NavigationBar .panel-btn[data-active="true"] {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: unset;
+	}
+
+	.Tab {
+		max-width: 36px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.Tab .fav {
+		width: 18px;
+		height: 18px;
+		transform: translateX(-6%);
+	}
+
+	.Tab .drag-layer {
+		position: inherit;
+	}
+}
+}
