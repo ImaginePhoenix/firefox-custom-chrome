@@ -38,3 +38,7 @@
   min-width: var(--uc-sidebar-hover-width) !important;
   transition-delay: 0ms !important
 }
+
+#sidebar-box{
+    background-color: transparent !important;
+}
